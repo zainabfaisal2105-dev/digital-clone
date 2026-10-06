@@ -106,7 +106,21 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onStartResearchTop
         }),
       });
 
-      const data = await response.json();
+      let data: any = {};
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        if (!response.ok) {
+          throw new Error(text || `Server responded with status ${response.status}`);
+        }
+        try {
+          data = JSON.parse(text);
+        } catch {
+          throw new Error(text || 'Received non-JSON response from server.');
+        }
+      }
 
       if (!response.ok) {
         throw new Error(data.error || 'Failed to communicate with Zainab.');
