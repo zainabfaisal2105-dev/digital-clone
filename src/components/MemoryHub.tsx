@@ -209,14 +209,14 @@ export const MemoryHub: React.FC = () => {
               <div>
                 <h3 className="text-sm font-semibold text-white flex items-center gap-2">
                   <Briefcase className="w-4 h-4 text-purple-400" />
-                  <span>SQA Intern @ Grayphite.com</span>
+                  <span>SQA Internship @ Grayphite.com (Completed)</span>
                 </h3>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Schedule: ~6 hrs/day (starts 8:30 AM) • Mentor: Fizza Rehan (11–12) • HR: Mahwish Ajmal
+                  Concluded • Mentor: Fizza Rehan • HR: Mahwish Ajmal • Now focused full-time on 6th semester at UMT
                 </p>
               </div>
-              <span className="px-2.5 py-1 rounded-full text-[11px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono">
-                Active Internship
+              <span className="px-2.5 py-1 rounded-full text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">
+                Concluded / University Full-Time
               </span>
             </div>
 
